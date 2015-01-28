@@ -22,12 +22,13 @@ module.exports = function(config) {
       'client/app/app.js',
       'client/app/**/*.js',
       'client/components/**/*.js',
+      'client/tests/**/*.js',
       'client/app/**/*.html',
       'client/components/**/*.html'
     ],
 
     preprocessors: {
-      '**/*.html': 'html2js',
+      '**/*.html': 'html2js'
     },
 
     ngHtml2JsPreprocessor: {

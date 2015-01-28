@@ -8,6 +8,10 @@ angular.module('addressBookApp', [
 ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
+      .when('/', {
+        templateUrl: 'app/partials/main.html',
+        controller: 'MainCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

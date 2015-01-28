@@ -7,8 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="/">
-    <title></title>
-    <meta name="description" content="">
+    <title>Address book</title>
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(client) app/vendor.css -->
@@ -17,11 +16,11 @@
       <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
       <!-- endbower -->
     <!-- endbuild -->
+
     <!-- build:css({.tmp,client}) app/app.css -->
-    <link rel="stylesheet" href="app/app.css">
       <!-- injector:css -->
-      <link rel="stylesheet" href="app/app.css">
-      <link rel="stylesheet" href="app/main/main.css">
+      <link rel="stylesheet" href="assets/styles/app.css">
+      <link rel="stylesheet" href="assets/styles/main.css">
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
@@ -46,13 +45,11 @@
       <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,client}) app/app.js -->
-        <script src="app/app.js"></script>
-          <!-- injector:js -->
-          <script src="app/main/main.controller.js"></script>
-          <script src="app/main/main.js"></script>
-          <script src="components/navbar/navbar.controller.js"></script>
-          <!-- endinjector -->
-        <!-- endbuild -->
+      <!-- build:js({.tmp,client}) app/app.js -->
+      <script src="app/app.js"></script>
+        <!-- injector:js -->
+        <script src="app/controllers/main.controller.js"></script>
+        <!-- endinjector -->
+      <!-- endbuild -->
 </body>
 </html>
