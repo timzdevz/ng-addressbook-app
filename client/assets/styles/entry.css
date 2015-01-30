@@ -1,0 +1,18 @@
+.entry .entry-edit-actions span {
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+.entry div.prop-item {
+  display: inline;
+  padding-right: 10px;
+}
+
+.entry span {
+  font-weight: bold;
+}
+
+.edit-entry label,
+.edit-entry input {
+  margin-right: 5px;
+}

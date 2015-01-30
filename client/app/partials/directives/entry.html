@@ -1,0 +1,17 @@
+<div class="entry panel panel-default">
+  <div class="panel-body">
+
+    <div ng-show="!editMode">
+      <div class="prop-item"><span>Name:</span> {{ entry.name }}</div>
+      <div class="prop-item"><span>Phone: </span> {{ entry.phone || '-' }}</div>
+      <div class="pull-right entry-edit-actions">
+        <span class="glyphicon glyphicon-pencil cursor-pointer" title="Edit entry" ng-click="edit()"></span>
+        <span class="glyphicon glyphicon-remove cursor-pointer" title="Remove entry" ng-click="remove()"></span>
+      </div>
+    </div>
+
+    <div ng-show="editMode">
+      <edit-entry save="save()" cancel="cancel()" entry="editEntry" save-btn-text="Save"></edit-entry>
+    </div>
+  </div>
+</div>

@@ -1,19 +1,40 @@
-<header class="hero-unit">
+<header>
   <div class="container">
     <h1>Address book</h1>
   </div>
 </header>
 
 <div class="container">
+
+  <div class="row entry-list-header">
+    <div class="col-md-8">
+      <input type="text" class="form-control" placeholder="Search..." ng-model="entryFilter"/>
+    </div>
+
+    <div class="col-md-4">
+      <button class="btn btn-success" ng-click="addNewEntry()">
+        <span class="glyphicon glyphicon-plus"></span> Add new entry</button>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-lg-12">
+      <h4 ng-hide="entries.length || editNewEntry">No entries found.</h4>
 
+      <div class="entry panel panel-default" ng-show="editNewEntry">
+        <div class="panel-body">
+          <edit-entry save="saveNewEntry()" cancel="cancelNewEntry()" entry="newEntry"
+                      save-btn-text="Add new entry"></edit-entry>
+        </div>
+      </div>
+
+      <entry ng-repeat="entry in entries | filter: entryFilter"></entry>
     </div>
   </div>
 </div>
 
 <footer class="footer">
   <div class="container">
-      <p>Address book © 2015</p>
+    <p>Address book © 2015</p>
   </div>
 </footer>

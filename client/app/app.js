@@ -1,11 +1,10 @@
 'use strict';
 
 angular.module('addressBookApp', [
-  'ngCookies',
   'ngResource',
-  'ngSanitize',
   'ngRoute'
 ])
+  .value('toastr', window.toastr)
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
